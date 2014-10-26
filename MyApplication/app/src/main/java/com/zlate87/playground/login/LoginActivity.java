@@ -1,4 +1,4 @@
-package com.zlate87.playground;
+package com.zlate87.playground.login;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -6,7 +6,6 @@ import android.annotation.TargetApi;
 
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.CursorLoader;
-import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -28,6 +27,9 @@ import android.widget.TextView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.SignInButton;
+import com.zlate87.playground.R;
+import com.zlate87.playground.base.PlusBaseActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +42,7 @@ import java.util.List;
  * https://developers.google.com/+/mobile/android/getting-started#step_1_enable_the_google_api
  * and follow the steps in "Step 1" to create an OAuth 2.0 client for your package.
  */
-public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<Cursor>{
+public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<Cursor> {
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -250,7 +252,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         mSignOutButtons.setVisibility(connected ? View.VISIBLE : View.GONE);
         mPlusSignInButton.setVisibility(connected ? View.GONE : View.VISIBLE);
         mEmailLoginFormView.setVisibility(connected ? View.GONE : View.VISIBLE);
-//        Intent intent = new Intent(this, MyActivity.class);
+//        Intent intent = new Intent(this, NavigationDrawerActivity.class);
 //        startActivity(intent);
     }
 

@@ -1,10 +1,10 @@
-package com.zlate87.playground;
+package com.zlate87.playground.base;
 
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
 
-import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -16,7 +16,7 @@ import com.google.android.gms.plus.PlusClient;
 /**
  * A base class to wrap communication with the Google Play Services PlusClient.
  */
-public abstract class PlusBaseActivity extends MyActivity
+public abstract class PlusBaseActivity extends ActionBarActivity
         implements GooglePlayServicesClient.ConnectionCallbacks,
         GooglePlayServicesClient.OnConnectionFailedListener {
 
